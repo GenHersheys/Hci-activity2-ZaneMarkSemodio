@@ -1,0 +1,87 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+  }
+  
+  .container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  .game-board {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .card {
+    width: calc(25% - 10px);
+    height: 120px;
+    margin: 5px;
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    cursor: pointer;
+    border-radius: 10px;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+  
+  .card .front-face,
+  .card .back-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+  }
+  
+  .front-face {
+    background-color: #e0e0e0;
+    color: #333;
+    backface-visibility: hidden;
+  }
+  
+  .back-face {
+    background-color: #007bff;
+    color: #fff;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+  }
+  
+  .card.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Background pattern */
+  body {
+    background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+  }
+  
